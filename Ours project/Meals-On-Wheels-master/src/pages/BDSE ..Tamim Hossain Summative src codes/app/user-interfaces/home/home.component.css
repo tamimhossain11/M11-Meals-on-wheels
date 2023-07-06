@@ -1,0 +1,69 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+/* Topics */
+.topic-tag {
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px 30px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .topic-tag:hover {
+    background-color: rgb(20, 92, 247);
+    color: white;
+  }
+  
+  /* Featured Jobs */
+  .job-container {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: azure;
+  }
+  
+  .logo img {
+    width: 120px;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-login-form {
+      width: 100%;
+    }
+  
+    .hero-image img {
+      min-width: 300px;
+      max-width: 600px;
+    }
+  
+    .hero-content .heading {
+      min-width: auto;
+      max-width: auto;
+    }
+  
+    .partner img {
+      width: 150px;
+    }
+  }
+  .bbtn {
+    margin-top: 30px;
+  }
+  
+  @media (max-width: 576px) {
+    .partner img {
+      width: 100px;
+    }
+  }

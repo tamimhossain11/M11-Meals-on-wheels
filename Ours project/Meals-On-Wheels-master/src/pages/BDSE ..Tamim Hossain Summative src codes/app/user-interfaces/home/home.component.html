@@ -1,0 +1,141 @@
+<app-navbar></app-navbar>
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-md-9 col-lg-6 col-xl-5">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+            class="img-fluid" alt="Sample image">
+        </div>
+        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+            <div class="divider d-flex align-items-center my-4">
+                <h1>Growth Is In Our DNA</h1>
+              </div>
+           
+          <form>
+            <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+              <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+              <button type="button" class="btn btn-primary btn-floating mx-1">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+  
+              <button type="button" class="btn btn-primary btn-floating mx-1">
+                <i class="fab fa-twitter"></i>
+              </button>
+  
+              <button type="button" class="btn btn-primary btn-floating mx-1">
+                <i class="fab fa-linkedin-in"></i>
+              </button>
+            </div>
+  
+            <div class="divider d-flex align-items-center my-4">
+              <p class="text-center fw-bold mx-3 mb-0">Or</p>
+            </div>
+  
+            <!-- Email input -->
+            <form action="/action_page.php" class="was-validated">
+              <div class="mb-3 mt-3">
+                <label for="uname" class="form-label">Username:</label>
+                <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+
+              <div class="mb-3">
+                <label for="pwd" class="form-label">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+              </div>
+            </form>
+  
+            <div class="d-flex justify-content-between align-items-center">
+              <!-- Checkbox -->
+              <div class="form-check mb-0">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                <label class="form-check-label" for="form2Example3">
+                  Remember me
+                </label>
+              </div>
+              <a routerLink="/forgot-password" class="text-body">Forgot password?</a>
+            </div>
+  
+            <div class="text-center text-lg-start mt-4 pt-2">
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary" routerLink="/user-profile">Log in</button>
+              </div>
+              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+                  class="link-danger" routerLink="/registration">Register</a></p>
+            </div>
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Topics -->
+<section id="topics" class="mt-5">
+    <div class="container">
+      <div class="heading">
+        <h3>Topics you may interested in</h3>
+      </div>
+      <div class="d-flex flex-wrap mt-3">
+        <div class="topic-tag me-3 mb-3" *ngFor="let topics of topics">
+          <span>{{ topics.topic }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Featured Jobs -->
+  <section id="featured-jobs" class="mt-5">
+    <div class="container">
+      <div class="heading">
+        <h3>Featured Jobs</h3>
+      </div>
+      <div class="d-flex flex-wrap mt-3">
+        <!-- Job -->
+        <div class="job-container me-3 mb-3" *ngFor="let jobs of jobs">
+          <div class="d-flex">
+            <div class="wrapper d-flex align-items-center me-3">
+              <div class="logo me-3">
+                <img src="{{ jobs.logo }}" alt="{{ jobs.alt }}" />
+              </div>
+              <div class="detail">
+                <h5 class="fw-semibold fs-6">{{ jobs.jobName }}</h5>
+                <h5 class="text-secondary fs-6">{{ jobs.company }}</h5>
+              </div>
+            </div>
+            <div class="bbtn">
+            <div class="wrapper d-flex align-items-center mb-3">
+              <button class="btn btn-outline-dark">Apply Job</button>
+            </div>
+        </div>
+          </div>
+          <div class="d-flex mt-4">
+            <button class="btn btn-outline-secondary me-3">
+              {{jobs.tags?.[0]}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero -->
+<div class="p-5 text-center bg-image rounded-3" style="
+background-image:url(../../assets/jobs/image00.png);
+height: 400px;
+">
+<div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+<div class="d-flex justify-content-center align-items-center h-100">
+  <div class="text-white">
+    <h1 class="mb-3">Lets get the people you like to engage.</h1>
+    <h4 class="mb-3">Here will be your journey start.Lets bring you a better and easy world with us</h4>
+    <a class="btn btn-outline-light btn-lg" href="#!" role="button">Start Tour</a>
+  </div>
+</div>
+</div>
+</div>
+<!-- Hero -->
+  
+  <app-footer></app-footer>
